@@ -1,0 +1,67 @@
+﻿@{ Layout = null; }
+@model Falcon_IssueTracker.Models.LoginViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Login to Falcon IssueTracker</title>
+
+    <!-- vendor css -->
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/ionicons.css" rel="stylesheet" />
+
+    <!-- Bracket CSS -->
+    <link href="~/Content/bracket.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
+
+        <div class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 bg-white rounded shadow-base">
+            <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> Login <span class="tx-normal">]</span></div>
+            <div class="tx-center mg-b-60">Login to Falcon IssueTracker</div>
+
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Username" } })
+                </div>
+                <div class="form-group">
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password" } })
+                    <a href="@Url.Action("ForgotPassword", "Account")" class="tx-info tx-12 d-block mg-t-10">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-info btn-block">Login</button>
+            }
+
+            <div class="mg-t-60 tx-center">Not registered yet? <a href="@Url.Action("Register", "Account")" class="tx-info">Register Here</a></div>
+        </div><!-- login-wrapper -->
+    </div><!-- d-flex -->
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/popper.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <script>
+        var unconfirmedEmailError = '@TempData["UnconfirmedEmailError"]';
+        if (unconfirmedEmailError != "") {
+            Swal.fire({
+                title: 'Account Error!',
+                text: unconfirmedEmailError,
+                icon: 'error',
+                confirmButtonText: 'OK'
+            })
+        }
+    </script>
+</body>
+</html>

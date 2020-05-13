@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Falcon_IssueTracker", "Falcon_IssueTracker.csproj", "{D32163D7-7530-44F4-8F02-1248F8E9E5CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D32163D7-7530-44F4-8F02-1248F8E9E5CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32163D7-7530-44F4-8F02-1248F8E9E5CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32163D7-7530-44F4-8F02-1248F8E9E5CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32163D7-7530-44F4-8F02-1248F8E9E5CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {540D9B19-2403-4C2D-BC95-9FD8A8866D84}
+	EndGlobalSection
+EndGlobal
